@@ -4,6 +4,8 @@
 
 from random import choice
 
+valid_selections = ["rock", "paper", "scissors"] # only have to update in one place
+
 #
 # USER SELECTION
 #
