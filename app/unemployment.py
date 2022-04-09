@@ -4,11 +4,10 @@ print("UNEMPLOYMENT REPORT...")
 
 
 import os
-import json
-from dotenv import load_dotenv
-import requests
+from pandas import DataFrame
+from plotly.express import bar
+from app.alphavantage_service import fetch_unemployment_data
 
-load_dotenv()
 
 ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
 

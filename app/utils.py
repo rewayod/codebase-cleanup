@@ -16,9 +16,37 @@ def to_usd(my_price):
 
 
 
+def determine_winner(user_choice, computer_choice):
+
+    """
+    :param user_choice: rock/paper/scissors
+    :param computer_choice: rock/paper/scissors
+    :return: winner: user/computer based on both params
+    """
+
+    winners = {
+        "rock": {
+            "rock": None,
+            "paper": "paper",
+            "scissors": "rock",
+        },
+        "paper": {
+            "rock": "paper",
+            "paper": None,
+            "scissors": "scissors",
+        },
+        "scissors": {
+            "rock": "rock",
+            "paper": "scissors",
+            "scissors": None,
+        }
+    }
+    winning_choice = winners[user_choice][computer_choice]
+    return winning_choice
+
+
 if __name__ == "__main__":
     #if this code is in the global scope of a file we're trying to import from:
     # it will throw errors when we try to run those other files 
     price = input("Please choose a price, like 4.999:")
     print(to_usd(float(price)))
-    
