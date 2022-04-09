@@ -43,11 +43,45 @@ SENDGRID_API_KEY="SG...."
 Run the game:
 
 ```sh
-python app/game.py
+python -m app.game
 ```
 
-Run the inventory report:
+Run crypto:
 
-'''sh
-python app/groceries.py
-'''
+```sh
+python -m app.crypto
+```
+
+Run stocks:
+
+```sh
+python -m app.stocks
+```
+
+Run unemployment:
+
+```sh
+python -m app.unemployment
+python -m app.unemployment_email
+```
+
+Run groceries:
+
+```sh
+python -m app.groceries
+```
+
+Run email me:
+
+```sh
+python -m app.email_me
+```
+
+## Testing
+
+To run tests on: the logic that decides the winner of
+the game and tests the formatted output of the to_usd function,
+type the following command into the command line interface:
+```sh
+pytest
+```
