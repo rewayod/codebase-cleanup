@@ -78,10 +78,7 @@ python -m app.email_me
 ```
 
 ## Testing
-
-To run tests on: the logic that decides the winner of
-the game and tests the formatted output of the to_usd function,
-type the following command into the command line interface:
+Type the following command into the command line interface:
 ```sh
 pytest
 ```
