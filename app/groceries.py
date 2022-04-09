@@ -5,7 +5,9 @@
 #products = products_df.to_dict("records")
 
 import os
-
+import statistics
+from app.utils import to_usd
+from pandas import read_csv
 
 def to_usd(my_price):
     """
@@ -38,8 +40,6 @@ else:
 
 
 
-from pandas import read_csv
-
 #reads the csv file into products variable
 products = read_csv(csv_filepath)
 #pandas transforms the data into a list of dictionaries
@@ -61,7 +61,6 @@ all_prices = []
 for p in products:
     all_prices.append(float(p["price"]))
 
-import statistics
 avg_price = statistics.median(all_prices)
 
 print("---------")
