@@ -1,4 +1,3 @@
-
 # READ INVENTORY OF PRODUCTS
 
 #products_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
